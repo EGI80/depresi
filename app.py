@@ -16,7 +16,7 @@ st.set_page_config(
 # Load data with caching for performance
 @st.cache_data(show_spinner=True)
 def load_data():
-    data = pd.read_csv('Student_Mental_Health.csv')
+    data = pd.read_csv('Student_Mental_health.csv')
 
     imputer = SimpleImputer(strategy='most_frequent')
     data[['Age', 'What is your course?', 'Marital status']] = imputer.fit_transform(
